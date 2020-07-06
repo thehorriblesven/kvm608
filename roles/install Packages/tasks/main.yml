@@ -2,13 +2,13 @@
 # install packages
 
 - name: Install a list of packages
-  apt:
-    pkg:
-      - vim
-      - tmux
-      - atop
-      - htop
-      - man-db
-      - manpages-de
-      - ufw
-  force: yes
+    apt:
+      pkg:
+        - vim
+        - tmux
+        - atop
+        - htop
+        - man-db
+        - manpages-de
+        - ufw
+    force: yes
