@@ -22,6 +22,16 @@
 
 - name: ouptut files
   command: less /etc/hosts
+  register: output1
+
+- name: "Output script"
+  debug:
+    msg: "{{ output1.stdout | to_yaml }}"
 
 - name: output files 2
   command: less /etc/hostname
+  register: output2
+
+- name: "Output script"
+  debug:
+    msg: "{{ output2.stdout | to_yaml }}"
