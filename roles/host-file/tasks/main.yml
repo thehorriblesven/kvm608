@@ -2,7 +2,7 @@
 # Edit /etc/hosts
 
 - name: insert and append hostname + ip
-  inlinefile:
+  lineinfile:
     path: /etc/hosts
     regexp: '^45\.142\.114\.137'
     line: 45.142.114.137  server01.alpha-itservice.de
