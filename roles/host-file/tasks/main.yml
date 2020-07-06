@@ -19,3 +19,9 @@
     path: /etc/hostname
     regexp: '^kvm'
     line: server01.alpha-itservice.de
+
+- name: ouptut files
+  command: less /etc/hosts
+
+- name: output files 2
+  command: less /etc/hostname
