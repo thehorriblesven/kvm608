@@ -4,7 +4,7 @@
 - name: insert and append hostname + ip
   lineinfile:
     path: /etc/hosts
-    regexp: '^45\.142\.114\.140'
+    regexp: '^45\.142\.114\.137'
     line: 45.142.114.137  server01.alpha-itservice.de
 
 
@@ -13,3 +13,9 @@
     path: /etc/hosts
     insertafter: '^45\.142\.114\.137'
     line: 45.142.114.140  server01.us72.de
+
+- name: insert and append hostname + ip 2
+  lineinfile:
+    path: /etc/hostname
+    regexp: '^kvm'
+    line: server01.alpha-itservice.de
