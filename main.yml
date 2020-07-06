@@ -8,3 +8,5 @@
   tasks:
     - include_role:
         name: host-file
+    - include_role:
+        name: install Packages
