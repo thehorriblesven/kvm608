@@ -1,4 +1,10 @@
 ---
 
-- name: Hostname ändern
-  
+# kv#608 hosts modifys
+- hosts: kvm608
+  gather_facts: false
+  remote_user: root
+  become: true
+  tasks:
+    - include_role:
+        name: host-file
