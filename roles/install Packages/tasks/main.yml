@@ -1,5 +1,12 @@
 ---
 # install packages
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    update_cache: yes
+
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
 
 - name: Install a list of packages
   apt:
@@ -10,7 +17,3 @@
     - htop
     - man-db
     - manpages-de
-
-- name: Unconditionally reboot the machine with all defaults
-  reboot:
-

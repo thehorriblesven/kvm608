@@ -10,3 +10,5 @@
         name: host-file
     - include_role:
         name: install Packages
+    - include_role:
+        name: install_and_configure_ufw

@@ -1,0 +1,27 @@
+---
+## Install, configure, enable and restart ufw
+
+- name: Install ufw pckage
+  apt:
+    name: ufw
+    state: latest
+
+- name: Allow port standard ports
+  ufw:
+    rule: allow
+    port: '{{ item }}'
+    proto: tcp
+  loop:
+    - 22
+    - 25
+    - 110
+    - 143
+    - 80
+    - 443
+    - 587
+    - 8080
+    - 22333
+  loop_control:
+    label: "{{ item.port }}"
+
+- name:
