@@ -10,5 +10,7 @@
     - htop
     - man-db
     - manpages-de
-    - ufw
-#  force: yes
+
+- name: Unconditionally reboot the machine with all defaults
+  reboot:
+
