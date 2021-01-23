@@ -1,3 +1,3 @@
 [kvm608]
-server01.alpha-itservice.de 	ansible_host=45.142.114.137
+server01.alpha-itservice.de 	ansible_host=45.142.114.137 ansible_port=22333
 
