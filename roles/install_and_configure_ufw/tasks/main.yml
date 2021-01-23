@@ -8,19 +8,20 @@
 
 - name: Allow port standard ports
   ufw:
+    state: enabled
     rule: allow
-    port: '{{ item }}'
+    port: "{{ item }}"
     proto: tcp
   loop:
-    - 22
-    - 25
-    - 110
-    - 143
-    - 80
-    - 443
-    - 587
-    - 8080
-    - 22333
+    - "22"
+    - "25"
+    - "110"
+    - "143"
+    - "80"
+    - "443"
+    - "587"
+    - "8080"
+    - "22333"
   loop_control:
-    label: "{{ item.port }}"
+    label: "{{ item }}"
 
